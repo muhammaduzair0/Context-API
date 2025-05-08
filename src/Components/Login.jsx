@@ -23,6 +23,7 @@ const Login = () => {
           setPassword(e.target.value);
         }}
       />
+      <button onClick={handleSubmit}>Submit</button>
     </div>
   );
 };
