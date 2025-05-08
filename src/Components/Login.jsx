@@ -2,6 +2,15 @@ import React, { useState, useContext } from "react";
 import UserContext from "../Context/UserContext";
 
 const Login = () => {
+  const [username, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+
+  const { setUser } = useContext(UserContext);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setUser({username, password});
+  };
   return (
     <div>
       <h2>Login</h2>
